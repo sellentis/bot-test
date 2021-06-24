@@ -30,8 +30,8 @@ const start = async () => {
 				await client.connect()
 				console.log("-----------Соединение установлено-----------")
 				const users = client.db().collection('users')
-				const user = await users.findOne({name: msg.chat.username})
-				if (user) {
+				const chatIdDb = await users.findOne({id: chatId})
+				if (chatIdDb) {
 
 				}
 				else {
